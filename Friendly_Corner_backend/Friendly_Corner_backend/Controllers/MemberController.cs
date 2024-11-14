@@ -1,7 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
 using Friendly_Corner_backend.Models;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Friendly_Corner_backend.Controllers

@@ -1,0 +1,137 @@
+/* Common settings */
+
+.wrapper {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Background picture container */
+.section {
+  height: clamp(200px, 60vw, 90vh);
+}
+
+/* Secondary container */
+.sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(300px, 40vw, 450px);
+  padding-top: clamp(5px, 10px, 15px);
+  padding-bottom: clamp(10px, 55px, 20px);
+}
+
+/* Text container */
+.text {
+  font-family: var(--ff-text);
+  display: block;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* margin-inline: auto; /* Same as justify-content: center; */
+  max-width: clamp(300px, 50%, 900px);
+
+  animation: abt-fade-in;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.text h1 {
+  font-family: var(--ff-title);
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.text h3 {
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-weight: 400;
+}
+
+.text p, figcaption, figcaption a {
+  font-size: clamp(.9rem, 2vw, 1.5rem);
+  text-wrap: pretty;
+}
+
+@keyframes abt-fade-in {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+}
+
+/* Specific settings */
+.wc-bgd-img {
+  /* background-image: url('../../Images/friendly-corner.png'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* About us */
+.about-sub {
+  background-color: var(--clr-bgd-brown);
+  color: var(--clr-font-light);
+}
+
+/* Galery */
+.cowork-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame {
+  display: inline-flex;
+  justify-content: center;
+  column-gap: clamp(20px, 2vw, 50px);
+  
+  width: clamp(450px, 60vw, 920px);
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 668px) {
+  .photo-frame {
+    margin-top: 15px;
+  }
+}
+
+figure .image {
+  width: clamp(150px, 40vw, 400px);
+}
+
+figcaption a {
+  color: var(--clr-bgd-brown);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+figcaption a:visited {
+  color: var(--clr-bgd-brown);
+}
+
+/* Insta feed */
+.insta-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(350px, 65vw, 1000px);
+  height: clamp(480px, 65vw, 950px);
+}
+
+.instagram-embed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.instagram-embed iframe {
+  overflow-y: hidden;
+  width: calc(100% + 34px);
+  height: 100%;
+  border: 0;
+}

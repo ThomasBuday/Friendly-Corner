@@ -2938,6 +2938,7 @@
     "net8.0": [
       "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.10",
+      "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
       "Pomelo.EntityFrameworkCore.MySql >= 8.0.2",
@@ -2945,19 +2946,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\deltagaren\\.nuget\\packages\\": {}
+    "C:\\Users\\Thomas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deltagaren\\Documents\\Lexicon Projects\\Web-Designing\\Friendly_Corner_backend\\Friendly_Corner_backend\\Friendly_Corner_backend.csproj",
+      "projectUniqueName": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Friendly_Corner_backend.csproj",
       "projectName": "Friendly_Corner_backend",
-      "projectPath": "C:\\Users\\deltagaren\\Documents\\Lexicon Projects\\Web-Designing\\Friendly_Corner_backend\\Friendly_Corner_backend\\Friendly_Corner_backend.csproj",
-      "packagesPath": "C:\\Users\\deltagaren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deltagaren\\Documents\\Lexicon Projects\\Web-Designing\\Friendly_Corner_backend\\Friendly_Corner_backend\\obj\\",
+      "projectPath": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Friendly_Corner_backend.csproj",
+      "packagesPath": "C:\\Users\\Thomas\\.nuget\\packages\\",
+      "outputPath": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\deltagaren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2965,6 +2971,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2993,6 +3000,10 @@
             "version": "[4.0.3, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[8.0.10, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.10, )"
           },
@@ -3036,7 +3047,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

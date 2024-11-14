@@ -5,9 +5,11 @@
   min-height: 100vh;
   width: 100%;
   height: 100%;
+
+
   overflow-y: scroll;
-  padding-right: 17px; /* For cross-browser compatibility */
-  box-sizing: content-box; /* Width will be 100% + 17px */
+  /* padding-right: 17px; For cross-browser compatibility */
+  /* box-sizing: content-box; Width will be 100% + 17px */
 }
 
 a {

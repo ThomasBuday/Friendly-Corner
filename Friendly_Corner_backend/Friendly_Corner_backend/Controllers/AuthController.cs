@@ -9,7 +9,7 @@ using System.Text;
 namespace Friendly_Corner_backend.Controllers
 {
     [ApiController]
-    [Route("api/auth")]
+    [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -65,7 +65,12 @@ namespace Friendly_Corner_backend.Controllers
 
     public class LoginDto
     {
+<<<<<<< HEAD
         public string Username { get; set; } = string.Empty; // Non-nullable and defaults to empty string
         public string Password { get; set; } = string.Empty;
+=======
+        public required string Username { get; set; }
+        public required string Password { get; set; }
+>>>>>>> upstream/feature-branch-name
     }
 }

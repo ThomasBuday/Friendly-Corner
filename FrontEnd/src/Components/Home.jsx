@@ -89,6 +89,7 @@ function Home() {
             <div className="instagram-embed">
               <iframe async
                 src="https://www.instagram.com/Friendlycorner_jkpg/embed"
+                // eslint-disable-next-line react/no-unknown-property
                 allowtransparency="true"
                 ></iframe>
             </div>

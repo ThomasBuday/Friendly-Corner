@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Friendly_Corner_backend.Models;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq; // Make sure this is included for .ToList()
 using Microsoft.EntityFrameworkCore;
 
 namespace Friendly_Corner_backend.Controllers
@@ -12,6 +12,7 @@ namespace Friendly_Corner_backend.Controllers
     {
         private readonly AppDbContext _context;
 
+        // Constructor to inject AppDbContext
         public RoomController(AppDbContext context)
         {
             _context = context;

@@ -1,9 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import hd_logo from "../Images/logo.png";
 import "./Header.css";
 
+// eslint-disable-next-line react/prop-types
 function Header( { onLoginClick } ) {
 
   function handleLoginClick() {

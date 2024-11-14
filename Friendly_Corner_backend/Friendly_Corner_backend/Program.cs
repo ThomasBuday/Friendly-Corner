@@ -17,7 +17,7 @@ builder.Services.AddCors(options =>
 
 // Get the JWT key from configuration
 var jwtKey = builder.Configuration["JwtSettings:SigningKey"];
-var keyBytes = Encoding.ASCII.GetBytes(jwtKey);
+var keyBytes = Encoding.ASCII.GetBytes( string.Empty);
 
 
 // Configure MySQL Database

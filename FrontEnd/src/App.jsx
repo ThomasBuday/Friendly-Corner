@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
 import React, { useRef } from "react";
 
 import Header from './Components/Header';
@@ -9,9 +10,10 @@ import Butik from './Components/Butik';
 import ContactUs from './Components/ContactUs';
 import AdminPage from './Components/AdminPage';
 import UserPage from './Components/UserPage';
-
+import CalendarPage from "./Components/CalendarPage"; 
 import Footer from './Components/Footer';
 import LoginModal from './Components/LoginModal';
+
 
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/user" element={<UserPage />} />
+            <Route path="/boka" element={<CalendarPage />} />
           </Routes>
 
           <LoginModal ref={loginModalRef} />

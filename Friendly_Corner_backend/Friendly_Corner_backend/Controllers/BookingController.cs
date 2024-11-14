@@ -10,11 +10,11 @@ namespace Friendly_Corner_backend.Controllers
     [ApiController]
     public class BookingController : ControllerBase
     {
-        private readonly AppDbContext _context;
-
+       
+         private readonly AppDbContext _context ;
         public BookingController(AppDbContext context)
         {
-            _context = context;
+            _context=context;
         }
 
         // GET: api/booking

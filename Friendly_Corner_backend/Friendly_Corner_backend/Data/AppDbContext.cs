@@ -1,10 +1,11 @@
 ﻿using Friendly_Corner_backend.Models;
 using Microsoft.EntityFrameworkCore;
 
-public class AppDbContext : DbContext
-{
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
+public class AppDbContext:DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {}
     public DbSet<User> Users { get; set; }
     public DbSet<Room> Rooms { get; set; }
      public DbSet<Member> Members { get; set; }
@@ -14,4 +15,5 @@ public class AppDbContext : DbContext
             modelBuilder.Entity<Booking>()
                 .HasKey(b => b.BookingId);
         }
+    
 }

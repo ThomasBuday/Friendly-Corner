@@ -17,3 +17,57 @@ a {
 @media (prefers-reduced-motion: no-preference) {
   
 }
+.react-datepicker__input-container input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+/* Style the calendar popup */
+.react-datepicker {
+  font-family: 'Arial', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Change the header background and color */
+.react-datepicker__header {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Customize the day cells */
+.react-datepicker__day {
+  font-size: 14px;
+  padding: 8px;
+}
+
+/* Highlight the current day */
+.react-datepicker__day--today {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Style for the time picker dropdown */
+.react-datepicker__time-container {
+  font-size: 14px;
+}
+
+/* Style the button */
+.react-datepicker__navigation--previous,
+.react-datepicker__navigation--next {
+  background-color: #007bff;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+/* Style selected dates */
+.react-datepicker__day--selected {
+  background-color: #28a745;
+  color: white;
+}

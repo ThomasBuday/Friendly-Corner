@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Friendly_Corner_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1076c82bdb5d6f3e731fc446a060b968c25a3b23")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3240b581887348925a62699325c1c2f07189f54a")]
->>>>>>> upstream/feature-branch-name
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad32a2913bc13b9b7d92ab676843e1a40ef26f69")]
 [assembly: System.Reflection.AssemblyProductAttribute("Friendly_Corner_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Friendly_Corner_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useRef, useContext, useEffect } from 'react';
 import axios from 'axios';
 import Cropper from 'react-cropper';

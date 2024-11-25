@@ -12,6 +12,7 @@ import ContactUs from './Components/Main/ContactUs';
 import AdminPage from './Components/Admin/AdminPage';
 import UserPage from './Components/User/UserPage';
 
+
 import Footer from './Components/Main/Footer';
 import LoginModal from './Components/Main/LoginModal';
 
@@ -41,6 +42,7 @@ function App() {
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/admin/*" element={<AdminPage />} />
             <Route path="/user" element={<UserPage />} />
+            
            
           </Routes>
           <LoginModal ref={loginModalRef} />

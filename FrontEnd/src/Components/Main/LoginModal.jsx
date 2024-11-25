@@ -1,175 +1,143 @@
+// eslint-disable-next-line no-unused-vars
 import React, { forwardRef, useImperativeHandle, useState, useEffect } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Modal from "react-modal";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
+import "./LoginModal.css";
 
 
-import './LoginModal.css'
-
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 const LoginModal = forwardRef((props, ref) => {
+  const [showModal, setShowModal] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+  LoginModal.displayName = "LoginModal";
+  // Toggle modal visibility
+  const toggleModal = () => setShowModal((prev) => !prev);
 
-    const [showModal, setShowModal] = useState(false);
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [rememberMe, setRememberMe] = useState(false); // "Remember Me" checkbox state
-    const navigate = useNavigate(); // Initialize useNavigate
-    const [showPassword, setShowPassword] = useState(false);
-
-    // Check for existing token in localStorage or sessionStorage
-    if (showModal) {
-        const storedToken = localStorage.getItem('token') || sessionStorage.getItem('token');
-        
-        if (storedToken) {
-            // Decode and verify token to determine role and navigate
-            const user = JSON.parse(atob(storedToken.split('.')[1]));
-            const userRole = user.role;
-
-            if (userRole === 'admin') {
-                toggleModal();
-                navigate('/admin');
-            } else if (userRole === 'user') {
-                toggleModal();
-                navigate('/user');
-            }
-        }
-    }
-
-    // Toggle modal visibility
-    function toggleModal() {
-      setShowModal((prev) => !prev);
-    }
-
-    // Clear input fields when modal closes
-    useEffect(() => {
-    if (!showModal) {
-        setUsername('');
-        setPassword('');
-    }
-    }, [showModal]);
-
-    // Toggle password visibility
-    function togglePasswordVisibility() {
-        setShowPassword((prev) => !prev);
-    };
-
-    // Expose toggleModal to parent components via ref
-    useImperativeHandle(ref, () => ({
+  // Expose modal controls to parent component
+  useImperativeHandle(ref, () => ({
     openModal: toggleModal,
-    }));
+  }));
 
-//   Handle submit
+  // Clear fields when modal is closed
+  useEffect(() => {
+    if (!showModal) {
+      setUsername("");
+      setPassword("");
+    }
+  }, [showModal]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post('https://localhost:7177/api/auth/login', {
-            username: username,
-            password: password
-        });
-        // console.log('Login successful:', response.data);
-        const { token } = response.data;
+      const response = await axios.post("http://localhost:7177/api/auth/login", {
+        username,
+        password,
+      });
+      console.log("response",response);
+      const { token } = response.data;
 
-        if (rememberMe) {
-            localStorage.setItem('token', token); // Persist token between sessions
-        } else {
-            sessionStorage.setItem('token', token); // Only for current session
-        }
+      // Save token
+      if (rememberMe) {
+        localStorage.setItem("token", token);
+      } else {
+        sessionStorage.setItem("token", token);
+      }
 
-        // Decode the token to check roles
-        const user = JSON.parse(atob(token.split('.')[1])); // Simplified decoding
-        const userRole = user.role; // Adjust according to token payload structure
-
-    // Redirect based on role
-    if (userRole === 'admin') {
-        toggleModal();      // Close modal
-        navigate('/admin'); // Redirect to Admin page
-    } else if (userRole === 'user') {
-        toggleModal();      // Close modal
-        navigate('/user'); // Redirect to User page
-    } else {
-        alert('Unknown role');} // Unasigned role
+      // Decode token to get user role
+      // eslint-disable-next-line no-undef
+      const user = jwt_decode(token);
+      if (user.role === "admin") {
+        toggleModal();
+        navigate("/admin");
+      } else if (user.role === "user") {
+        toggleModal();
+        navigate("/user"); // Calendar page for user
+      } else {
+        alert("Unknown role");
+      }
     } catch (error) {
-        console.error('Login failed', error);
-        alert('Login failed, please check your credentials.');
+      console.log("error",error.message);
+      console.error("Login failed", error);
+      alert("Invalid credentials or server error.");
     }
-};
+  };
 
-    return(
-        <>
-        <div>
-            <Modal 
-                isOpen={showModal} 
-                onRequestClose={() => {
-                    toggleModal();
-                    setUsername(''); // Clear username when modal closes
-                    setPassword(''); // Clear password when modal closes
-                }} 
-                className='login-modal' 
-                overlayClassName="login-overlay"
-                shouldCloseOnOverlayClick={true}
-                shouldReturnFocusAfterClose={true}>
-
-                <div className="close-btn-cont">
-                    <button onClick={toggleModal} className="close-btn">X</button>
-                </div>    
-
-                {/* Login form */}
-                <div className="container">
-                    <h1 className="heading">Log in</h1>
-                    <form onSubmit={handleSubmit} className="form">
-                        <div>
-                            <label htmlFor="username" className="input-label">Username</label>
-                            <input 
-                                id="username" 
-                                type="text" 
-                                className="input" 
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}/>
-                        </div>
-                        <div>
-                            <label htmlFor="password" className="input-label">Password</label>
-                            <div className="password-input-container">
-                                <input
-                                className={`input password-input`}
-                                id="password"
-                                type={showPassword ? "text" : "password"}
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}/>
-                                <button
-                                    className="icon-button"
-                                    type="button"
-                                    onClick={togglePasswordVisibility}
-                                    title={showPassword ? "Hide password" : "Show password"}>
-                                    {showPassword ? <FaEyeSlash /> : <FaEye />}
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label className="remember-me">
-                                <input
-                                    className="remember-me"
-                                    type="checkbox"
-                                    checked={rememberMe}
-                                    onChange={(e) => setRememberMe(e.target.checked)}
-                                />
-                                Remember Me
-                            </label>
-                        </div>
-
-                        <button className="button">Submit</button>
-                    </form>
-                </div>
-
-
-            </Modal>
-            {/* Overlay div */}
-        {showModal && <div className="login-overlay" />}
+  return (
+    <>
+      <Modal
+        isOpen={showModal}
+        onRequestClose={toggleModal}
+        className="login-modal"
+        overlayClassName="login-overlay"
+      >
+        <div className="close-btn-cont">
+          <button onClick={toggleModal} className="close-btn">X</button>
         </div>
-        </>
-    );
+        <div className="container">
+          <h1 className="heading">Log in</h1>
+          <form onSubmit={handleSubmit} className="form">
+            <div>
+              <label htmlFor="username" className="input-label">
+                Username
+              </label>
+              <input
+                id="username"
+                type="text"
+                className="input"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="input-label">
+                Password
+              </label>
+              <div className="password-input-container">
+                <input
+                  id="password"
+                  type={showPassword ? "text" : "password"}
+                  className="input password-input"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+                <button
+                  type="button"
+                  className="icon-button"
+                  onClick={() => setShowPassword((prev) => !prev)}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </button>
+              </div>
+            </div>
+            <div>
+              <label className="remember-me">
+                <input
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                />
+                Remember Me
+              </label>
+            </div>
+            <button type="submit" className="button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </Modal>
+    </>
+  );
 });
+
 
 export default LoginModal

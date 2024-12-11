@@ -1,19 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Friendly_Corner_backend.Models
 {
-   public class Booking
-{
-    public int BookingId { get; set; }
-    public int RoomId { get; set; }
-    public int UserId { get; set; }
-    public DateTime BookingDate { get; set; }
-    public TimeSpan BookingTime { get; set; }
+    public class Booking
+    {
+        public int Id { get; set; }         // Primary Key
+        public DateTime StartTime { get; set; }  // Start time of the booking
+        public DateTime EndTime { get; set; }    // End time of the booking
+        public decimal Price { get; set; }  // Price of the booking
+        public int UserId { get; set; }     // Foreign Key for the User
 
-    public  Room ?Room { get; set; }
-    public  User? User { get; set; }
-}
+        // Navigation Property
+        public User User { get; set; }
+
+    }
 }

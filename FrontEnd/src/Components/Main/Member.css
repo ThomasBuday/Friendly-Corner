@@ -7,7 +7,9 @@
 }
 
 .photo-box img {
-    width: clamp(150px, 45vw, 250px);
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
     transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
@@ -20,9 +22,6 @@
     position: absolute;
     text-align: center;
     font-size: clamp(.6rem, 2vw, 1rem);
-    /* left: 40%; */
-    /* transform: translateX(-50%); */
-    /* filter: drop-shadow(0 0 20px var(--bgd)); */
     overflow: hidden;
     width: 80%;
     height: 0;
@@ -30,6 +29,5 @@
 }
 
 .photo-box:hover .member-overlay {
-    /* width: 80%; */
     height: 100%;
 }

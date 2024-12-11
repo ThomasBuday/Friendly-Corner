@@ -117,7 +117,7 @@ const LoginModal = forwardRef((props, ref) => {
 
                 {/* Login form */}
                 <div className="container">
-                    <h1 className="heading">Log in</h1>
+                    <h1 className="heading" >Log in</h1>
                     <form onSubmit={handleSubmit} className="form">
                         <div>
                             <label htmlFor="username" className="input-label">Username</label>

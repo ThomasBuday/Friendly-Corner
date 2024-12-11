@@ -3,8 +3,9 @@ import './UserList.css';
 import axios from 'axios';
 import { GrClose, GrCheckmark, GrTrash, GrUpdate } from "react-icons/gr";
 import ConfirmationDialog from '../ConfirmationDialog'; // Dialog component
-import UserModal from '../UserModal'; // User modal component
-import { BASE_URL } from './config';  // Import the base URL
+import ViewUserImgModal from './ViewUserImgModal'; // Modal component for viewing images
+import EditUserImgModal from './EditUserImgModal'; // Modal component for editing images
+import { BASE_URL } from '../../../config';  // Import the base URL
 
 const UserList = () => {
     const [editId, setEditId] = useState(null);
@@ -21,11 +22,12 @@ const UserList = () => {
     const [showDialog, setShowDialog] = useState(false);
     const [deleteUserId, setDeleteUserId] = useState(null);
     const [alert, setAlert] = useState({ message: '', show: false });
-    const [showModal, setShowModal] = useState(false);
+    const [showViewModal, setShowViewModal] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
     const [modalImageUrl, setModalImageUrl] = useState('');
     const [newImageFile, setNewImageFile] = useState(null);
+    const [currentUsername, setCurrentUsername] = useState('');
     const cropperRef = useRef(null);
-    const [isCropping, setIsCropping] = useState(false);
 
     const fetchUsers = async () => {
         try {
@@ -91,6 +93,7 @@ const UserList = () => {
             description: user.description,
             password: '' // Initialize password field
         });
+        setCurrentUsername(user.username); // Set the current username
     };
 
     const handleEditChange = (e) => {
@@ -101,40 +104,32 @@ const UserList = () => {
         });
     };
 
-    const handleUpdate = async (id) => {
+    const handleUpdate = async (id, updatedPictureUrl) => {
         try {
-            let updatedPictureUrl = editData.pictureUrl;
-            if (cropperRef.current && cropperRef.current.cropper) {
-                const canvas = cropperRef.current.cropper.getCroppedCanvas({
-                    width: 200, // max width
-                    height: 300, // max height (200 * 3/2 aspect ratio)
-                });
-
-                canvas.toBlob(async (blob) => {
-                    const formData = new FormData();
-                    formData.append('image', blob, `${editData.username}.png`);
-                    const uploadResponse = await axios.post(`${BASE_URL}/api/auth/uploadProfileImage`, formData);
-                    updatedPictureUrl = `${BASE_URL}/${uploadResponse.data.path}`;
-                    await updateUser(id, updatedPictureUrl);
-                });
-            } else {
-                await updateUser(id, updatedPictureUrl);
-            }
+            await axios.put(`${BASE_URL}/api/auth/update/${id}`, { ...editData, pictureUrl: updatedPictureUrl }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            fetchUsers();
+            setEditId(null);
+            showAlert('User updated successfully');
         } catch (error) {
             console.error('Error updating user:', error);
             showAlert('Failed to update user, please try again.');
         }
     };
 
-    const updateUser = async (id, imagePath) => {
-        await axios.put(`${BASE_URL}/api/auth/update/${id}`, { ...editData, pictureUrl: imagePath }, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-        fetchUsers();
-        setEditId(null);
-        showAlert('User updated successfully');
+    const handleImageClick = (url) => {
+        setModalImageUrl(url);
+        setShowViewModal(true);
+    };
+
+    const closeModal = () => {
+        setShowViewModal(false);
+        setShowEditModal(false);
+        setModalImageUrl('');
+        setNewImageFile(null);
     };
 
     const handleImageChange = (e) => {
@@ -143,49 +138,17 @@ const UserList = () => {
             const reader = new FileReader();
             reader.onloadend = () => {
                 setNewImageFile(reader.result);
-                setIsCropping(true);
-                setShowModal(true);
+                setShowEditModal(true);
             };
             reader.readAsDataURL(file);
         }
     };
-    const handleSave = async () => {
-        if (cropperRef.current && cropperRef.current.cropper) {
-            const canvas = cropperRef.current.cropper.getCroppedCanvas({
-                width: 200, // max width
-                height: 300, // max height (200 * 3/2 aspect ratio)
-            });
-
-            canvas.toBlob(async (blob) => {
-                const formData = new FormData();
-                formData.append('image', blob, `${editData.username}.png`);
-                const uploadResponse = await axios.post(`${BASE_URL}/api/auth/uploadProfileImage`, formData);
-                const updatedPictureUrl = `${BASE_URL}/${uploadResponse.data.path}`;
-                setEditData({ ...editData, pictureUrl: updatedPictureUrl });
-                setShowModal(false);
-                setIsCropping(false);
-                showAlert('Image updated successfully');
-            });
-        }
-    };
-
-    const handleImageClick = (url) => {
-        setModalImageUrl(`${BASE_URL}/${url}`);
-        setIsCropping(false);
-        setShowModal(true);
-    };
-
-    const closeModal = () => {
-        setShowModal(false);
-        setModalImageUrl('');
-        setNewImageFile(null);
-    };
-
+    
     return (
         <div className="user-list">
-            <div className="header">
+            <div className="user-text text">
                 <h1>Registered Users</h1>
-                {alert.show && <div className="alert">{alert.message}</div>}
+                {alert.show && <span className="alert">{alert.message}</span>}
             </div>
             <table className='user-tbl'>
                 <thead>
@@ -207,15 +170,15 @@ const UserList = () => {
                                     <td><input type="text" name="username" value={editData.username} onChange={handleEditChange} className="input-field" /></td>
                                     <td><input type="email" name="email" value={editData.email} onChange={handleEditChange} className="input-field" /></td>
                                     <td><input type="text" name="name" value={editData.name} onChange={handleEditChange} className="input-field" /></td>
-                                    <td className="picture-cell">
-                                        <input type="text" name="pictureUrl" value={editData.pictureUrl} onChange={handleEditChange} className="input-field" />
+                                    <td className='picture-btns'>
                                         <input type="file" accept="image/*" id="fileInput" onChange={handleImageChange} />
+                                        <label htmlFor="fileInput" className="update-file-input-label">Change Picture</label>
                                     </td>
                                     <td><input type="text" name="webUrl" value={editData.webUrl} onChange={handleEditChange} className="input-field" /></td>
                                     <td><input type="text" name="description" value={editData.description} onChange={handleEditChange} className="input-field" /></td>
                                     <td className="sticky-column">
-                                        <input type="password" name="password" placeholder="New Password" value={editData.password} onChange={handleEditChange} className="input-field" /><br/>
-                                        <button className='user-btn update' onClick={() => handleUpdate(user.id)}><GrCheckmark /></button>
+                                        <input type="text" name="password" placeholder="New Password" value={editData.password} onChange={handleEditChange} className="input-field" /><br/>
+                                        <button className='user-btn update' onClick={() => handleUpdate(user.id, editData.pictureUrl)}><GrCheckmark /></button>
                                         <button className='user-btn cancel' onClick={() => setEditId(null)}><GrClose /></button>
                                     </td>
                                 </>
@@ -224,8 +187,8 @@ const UserList = () => {
                                     <td>{user.username || "N/A"}</td>
                                     <td>{user.email || "N/A"}</td>
                                     <td>{user.name || "N/A"}</td>
-                                    <td className="picture-cell">
-                                        <button className='view-btn' onClick={() => handleImageClick(user.pictureUrl)}>View</button>
+                                    <td>
+                                        <button className='user-btn view' onClick={() => handleImageClick(user.pictureUrl)}>View</button>
                                     </td>
                                     <td>{user.webUrl || "N/A"}</td>
                                     <td>{user.description || "N/A"}</td>
@@ -245,14 +208,8 @@ const UserList = () => {
                 onConfirm={handleConfirmDelete}
                 onCancel={handleCancelDelete}
             />
-            <UserModal
-                show={showModal}
-                onClose={closeModal}
-                onSave={handleSave}
-                image={isCropping ? newImageFile : modalImageUrl}
-                cropperRef={cropperRef}
-                isCropping={isCropping}
-            />
+            <ViewUserImgModal show={showViewModal} onClose={closeModal} image={modalImageUrl} />
+            <EditUserImgModal show={showEditModal} onClose={closeModal} onSave={(updatedPictureUrl) => handleUpdate(editId, updatedPictureUrl)} image={newImageFile} username={currentUsername} />
         </div>
     );
 };

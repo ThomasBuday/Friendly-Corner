@@ -114,14 +114,12 @@ const RegisterPage = () => {
                         placeholder="Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        required
                     />
                     <input
                         type="url"
                         placeholder="Web URL"
                         value={webUrl}
                         onChange={(e) => setWebUrl(e.target.value)}
-                        required
                     />
                     <input type="file" accept="image/*" id="fileInput" onChange={handleImageChange} />
                     <label htmlFor="fileInput" className="file-input-label">Choose a picture</label>
@@ -130,7 +128,6 @@ const RegisterPage = () => {
                         placeholder="Description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        required
                     />
 
                     <button className='reg-btn' type="submit">Register</button>

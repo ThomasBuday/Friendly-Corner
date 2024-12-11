@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\controllers\\pricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\controllers\\pricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\models\\price.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\models\\price.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +19,36 @@
       "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\controllers\\backgroundimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|c:\\code\\internship\\friendly corner\\friendly_corner_backend\\friendly_corner_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CDBC01-65FE-4C58-A5E7-1C5A0BC64FB9}|Friendly_Corner_backend\\Friendly_Corner_backend.csproj|solutionrelative:friendly_corner_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,27 +78,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BackgroundImageController.cs",
-              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
-              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
-              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
-              "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PricesController.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\PricesController.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Controllers\\PricesController.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\PricesController.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\PricesController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T21:11:08.921Z"
+              "WhenOpened": "2024-12-11T16:18:37.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Price.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Models\\Price.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Models\\Price.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Models\\Price.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Models\\Price.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T16:16:54.524Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T09:55:57.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Models\\User.cs",
               "RelativeDocumentMoniker": "Friendly_Corner_backend\\Models\\User.cs",
               "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Models\\User.cs",
               "RelativeToolTip": "Friendly_Corner_backend\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T11:24:13.958Z"
+              "WhenOpened": "2024-11-24T11:24:13.958Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -80,33 +136,100 @@
               "RelativeDocumentMoniker": "Friendly_Corner_backend\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAB5AAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAiwBQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T10:50:38.695Z"
+              "WhenOpened": "2024-11-12T10:50:38.695Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Program.cs",
-              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Program.cs",
-              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Program.cs",
-              "RelativeToolTip": "Friendly_Corner_backend\\Program.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAUwCUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T16:14:18.207Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\appsettings.json",
               "RelativeDocumentMoniker": "Friendly_Corner_backend\\appsettings.json",
               "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\appsettings.json",
               "RelativeToolTip": "Friendly_Corner_backend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-28T14:01:45.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Models\\Booking.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Models\\Booking.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:34:54.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Models\\Room.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Models\\Room.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Models\\Room.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Models\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:37:32.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BackgroundImageController.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwCsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T21:11:08.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:15:49.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Controllers\\RoomController.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\RoomController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAywE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T15:09:25.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Program.cs",
+              "RelativeDocumentMoniker": "Friendly_Corner_backend\\Program.cs",
+              "ToolTip": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\Program.cs",
+              "RelativeToolTip": "Friendly_Corner_backend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T16:14:18.207Z",
               "EditorCaption": ""
             }
           ]

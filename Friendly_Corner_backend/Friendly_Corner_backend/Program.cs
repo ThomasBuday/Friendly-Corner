@@ -48,6 +48,12 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+// Configure the HTTP request pipeline
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+
 // Middleware for logging requests and setting CORS headers
 app.Use(async (context, next) =>
 {

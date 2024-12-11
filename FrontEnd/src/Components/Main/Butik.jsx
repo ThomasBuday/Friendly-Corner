@@ -1,6 +1,6 @@
-import butik1 from '../../../public/Images/Butik1.jpg';
-import butik2 from '../../../public/Images/Butik2.jpg';
-import butik3 from '../../../public/Images/Butik3.jpg';
+import butik1 from '../../Images/Butik1.jpg';
+import butik2 from '../../Images/Butik2.jpg';
+import butik3 from '../../Images/Butik3.jpg';
 import './Butik.css';
 
 import React, { useContext } from 'react'; 

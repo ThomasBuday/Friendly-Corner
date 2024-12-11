@@ -3,11 +3,9 @@ import './UserList.css';
 import axios from 'axios';
 import { GrClose, GrCheckmark, GrTrash, GrUpdate } from "react-icons/gr";
 import ConfirmationDialog from '../ConfirmationDialog'; // Dialog component
-import Modal from './UserModal'; // Modal component
-import Cropper from 'react-cropper';
-import 'cropperjs/dist/cropper.css';
-
-import { BASE_URL } from '../../../config';  // Import the base URL
+import ViewUserImgModal from './ViewUserImgModal'; // Modal component for viewing images
+import EditUserImgModal from './EditUserImgModal'; // Modal component for editing images
+import { BASE_URL, BASE_LOGIN } from '../../../config';  // Import the base URL
 
 const UserList = () => {
     const [editId, setEditId] = useState(null);
@@ -24,9 +22,11 @@ const UserList = () => {
     const [showDialog, setShowDialog] = useState(false);
     const [deleteUserId, setDeleteUserId] = useState(null);
     const [alert, setAlert] = useState({ message: '', show: false });
-    const [showModal, setShowModal] = useState(false);
+    const [showViewModal, setShowViewModal] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
     const [modalImageUrl, setModalImageUrl] = useState('');
     const [newImageFile, setNewImageFile] = useState(null);
+    const [currentUsername, setCurrentUsername] = useState('');
     const cropperRef = useRef(null);
 
     const fetchUsers = async () => {
@@ -93,6 +93,7 @@ const UserList = () => {
             description: user.description,
             password: '' // Initialize password field
         });
+        setCurrentUsername(user.username); // Set the current username
     };
 
     const handleEditChange = (e) => {
@@ -103,51 +104,32 @@ const UserList = () => {
         });
     };
 
-    const handleUpdate = async (id) => {
+    const handleUpdate = async (id, updatedPictureUrl) => {
         try {
-            let updatedPictureUrl = editData.pictureUrl;
-            if (cropperRef.current && cropperRef.current.cropper) {
-                const canvas = cropperRef.current.cropper.getCroppedCanvas({
-                    width: 200, // max width
-                    height: 300, // max height (200 * 3/2 aspect ratio)
-                });
-
-                canvas.toBlob(async (blob) => {
-                    const formData = new FormData();
-                    formData.append('image', blob, `${editData.username}.png`);
-                    const uploadResponse = await axios.post(`${BASE_URL}/api/auth/uploadProfileImage`, formData);
-                    updatedPictureUrl = `${BASE_URL}/${uploadResponse.data.path}`;
-                    await updateUser(id, updatedPictureUrl);
-                });
-            } else {
-                await updateUser(id, updatedPictureUrl);
-            }
+            await axios.put(`${BASE_URL}/api/auth/update/${id}`, { ...editData, pictureUrl: updatedPictureUrl }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            fetchUsers(); // Refresh the user data
+            setEditId(null);
+            showAlert('User updated successfully');
         } catch (error) {
             console.error('Error updating user:', error);
             showAlert('Failed to update user, please try again.');
         }
     };
 
-    const updateUser = async (id, imagePath) => {
-        await axios.put(`${BASE_URL}/api/auth/update/${id}`, { ...editData, pictureUrl: imagePath }, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-        fetchUsers();
-        setEditId(null);
-        showAlert('User updated successfully');
-    };
-
     const handleImageClick = (url) => {
-        const baseUrl = `${BASE_URL}`;
-        setModalImageUrl(`${url}`);
-        setShowModal(true);
+        setModalImageUrl(url);
+        setShowViewModal(true);
     };
 
     const closeModal = () => {
-        setShowModal(false);
+        setShowViewModal(false);
+        setShowEditModal(false);
         setModalImageUrl('');
+        setNewImageFile(null);
     };
 
     const handleImageChange = (e) => {
@@ -156,16 +138,17 @@ const UserList = () => {
             const reader = new FileReader();
             reader.onloadend = () => {
                 setNewImageFile(reader.result);
+                setShowEditModal(true);
             };
             reader.readAsDataURL(file);
         }
     };
-    
+
     return (
         <div className="user-list">
             <div className="user-text text">
                 <h1>Registered Users</h1>
-                {alert.show && <div className="alert">{alert.message}</div>}
+                {alert.show && <span className="user-alert">{alert.message}</span>}
             </div>
             <table className='user-tbl'>
                 <thead>
@@ -173,14 +156,14 @@ const UserList = () => {
                         <th>Username</th>
                         <th>Email</th>
                         <th>Name</th>
-                        <th>Picture</th> {/* Updated to show the picture */}
+                        <th>Picture</th>
                         <th>Web URL</th>
                         <th>Description</th>
                         <th className="sticky-column">Actions</th>
                     </tr>
                 </thead>
                 <tbody className='user-bdy'>
-                    {users.map(user => (
+                {users.filter(user => user.username !== BASE_LOGIN).map(user => (
                         <tr key={user.id} className={editId === user.id ? "editing" : ""}>
                             {editId === user.id ? (
                                 <>
@@ -188,28 +171,14 @@ const UserList = () => {
                                     <td><input type="email" name="email" value={editData.email} onChange={handleEditChange} className="input-field" /></td>
                                     <td><input type="text" name="name" value={editData.name} onChange={handleEditChange} className="input-field" /></td>
                                     <td className='picture-btns'>
-                                        {/* <input type="text" name="pictureUrl" value={editData.pictureUrl} onChange={handleEditChange} className="input-field" /> */}
                                         <input type="file" accept="image/*" id="fileInput" onChange={handleImageChange} />
                                         <label htmlFor="fileInput" className="update-file-input-label">Change Picture</label>
-                                        {newImageFile && (
-                                            <Cropper
-                                                className='cropper'
-                                                src={newImageFile}
-                                                style={{ height: '200px', width: '300px' }}
-                                                aspectRatio={2 / 3}
-                                                guides={true}
-                                                ref={cropperRef}
-                                                viewMode={1}
-                                                cropBoxResizable={false}
-                                                dragMode="move"
-                                            />
-                                        )}
                                     </td>
                                     <td><input type="text" name="webUrl" value={editData.webUrl} onChange={handleEditChange} className="input-field" /></td>
                                     <td><input type="text" name="description" value={editData.description} onChange={handleEditChange} className="input-field" /></td>
                                     <td className="sticky-column">
                                         <input type="text" name="password" placeholder="New Password" value={editData.password} onChange={handleEditChange} className="input-field" /><br/>
-                                        <button className='user-btn update' onClick={() => handleUpdate(user.id)}><GrCheckmark /></button> {/* Save Icon */}
+                                        <button className='user-btn update' onClick={() => handleUpdate(user.id, editData.pictureUrl)}><GrCheckmark /></button>
                                         <button className='user-btn cancel' onClick={() => setEditId(null)}><GrClose /></button>
                                     </td>
                                 </>
@@ -219,14 +188,17 @@ const UserList = () => {
                                     <td>{user.email || "N/A"}</td>
                                     <td>{user.name || "N/A"}</td>
                                     <td>
-                                        {/* {user.pictureUrl} */}
-                                        <button className='user-btn view' onClick={() => handleImageClick(user.pictureUrl)}>View</button>
+                                        <button 
+                                            className={`${!user.pictureUrl ? 'noview' : 'user-btn view'}`} 
+                                            onClick={() => user.pictureUrl && handleImageClick(`${user.pictureUrl}?t=${new Date().getTime()}`)} 
+                                            disabled={!user.pictureUrl} > {user.pictureUrl ? 'View' : 'N/A'} 
+                                        </button>
                                     </td>
                                     <td>{user.webUrl || "N/A"}</td>
                                     <td>{user.description || "N/A"}</td>
                                     <td className="sticky-column">
-                                        <button className='user-btn edit' onClick={() => handleEditClick(user)}><GrUpdate /></button> {/* Edit Icon */}
-                                        <button className='user-btn delete' onClick={() => handleDeleteClick(user.id)}><GrTrash /></button> {/* Delete Icon */}
+                                        <button className='user-btn edit' onClick={() => handleEditClick(user)}><GrUpdate /></button>
+                                        <button className='user-btn delete' onClick={() => handleDeleteClick(user.id)}><GrTrash /></button>
                                     </td>
                                 </>
                             )}
@@ -240,9 +212,8 @@ const UserList = () => {
                 onConfirm={handleConfirmDelete}
                 onCancel={handleCancelDelete}
             />
-            <Modal show={showModal} onClose={closeModal}>
-                <img src={modalImageUrl} alt="User" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-            </Modal>
+            <ViewUserImgModal show={showViewModal} onClose={closeModal} image={modalImageUrl} />
+            <EditUserImgModal show={showEditModal} onClose={closeModal} onSave={(updatedPictureUrl) => handleUpdate(editId, updatedPictureUrl)} image={newImageFile} username={currentUsername} />
         </div>
     );
 };

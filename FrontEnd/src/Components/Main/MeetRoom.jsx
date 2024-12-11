@@ -6,8 +6,18 @@ import { BackgroundContext } from '../../context/BackgroundContext';
 
 function MeetingRoom() {
 
-    const { backgrounds } = useContext(BackgroundContext);
-
+    const { backgrounds, prices } = useContext(BackgroundContext);
+  
+    // Helper function to get the price by ID
+    const formatNumber = (number) => {
+        return number.toLocaleString('sv-SE'); // Format numbers according to Swedish conventions
+    };
+    
+    const getPriceById = (id) => {
+        const price = prices.find(price => price.id === id);
+        return price ? formatNumber(price.amount) : "Loading...";
+    };
+    
     return(
         <>
         <div className="wrapper">
@@ -33,9 +43,9 @@ function MeetingRoom() {
                     <p>Du hittar oss i mysiga Tändsticksområdet, i en lugn och unik miljö.</p>
                     <p>Trevliga restauranger runt hörnet och nära till tåg och buss.</p><br /><br />
 
-                    <p>Heldag 3 000 kr</p>
-                    <p>Halvdag 1 800 kr</p>
-                    <p>Helgdag 4 000 kr</p><br />
+                    <p>Heldag {getPriceById(3)} kr</p>
+                    <p>Halvdag {getPriceById(4)} kr</p>
+                    <p>Helgdag {getPriceById(5)} kr</p><br />
 
                     <p>Det finns Wifi, bildskärm, whiteboard. Fika eller lunch kan ni boka via oss</p><br />
 

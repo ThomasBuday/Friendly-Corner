@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1OT2LWSnO0zrtZ7AKBIGULKDKbKLySBI+c8CSb8WmnU=",
+  "Hash": "7dOOp+hUQX+VI6mJC71KKzEoMyO0W89vvKKkHe2OsVY=",
   "Source": "Friendly_Corner_backend",
   "BasePath": "_content/Friendly_Corner_backend",
   "Mode": "Default",
@@ -110,6 +110,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img-bgd\\background5.jpg"
+    },
+    {
+      "Identity": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\wwwroot\\img-prfl\\adminAsa.png",
+      "SourceId": "Friendly_Corner_backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\wwwroot\\",
+      "BasePath": "_content/Friendly_Corner_backend",
+      "RelativePath": "img-prfl/adminAsa.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img-prfl\\adminAsa.png"
+    },
+    {
+      "Identity": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\wwwroot\\img-prfl\\adminTinna.png",
+      "SourceId": "Friendly_Corner_backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\wwwroot\\",
+      "BasePath": "_content/Friendly_Corner_backend",
+      "RelativePath": "img-prfl/adminTinna.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img-prfl\\adminTinna.png"
     }
   ]
 }

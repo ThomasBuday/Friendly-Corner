@@ -30,11 +30,9 @@ namespace Friendly_Corner_backend.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BackgroundType")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("ImagePath")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -74,31 +72,6 @@ namespace Friendly_Corner_backend.Migrations
                     b.ToTable("Bookings");
                 });
 
-            modelBuilder.Entity("Friendly_Corner_backend.Models.Member", b =>
-                {
-                    b.Property<int>("MemberId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("MemberId"));
-
-                    b.Property<string>("BusinessUrl")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ProfilePictureUrl")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("MemberId");
-
-                    b.ToTable("Members");
-                });
-
             modelBuilder.Entity("Friendly_Corner_backend.Models.Room", b =>
                 {
                     b.Property<int>("Id")
@@ -132,9 +105,6 @@ namespace Friendly_Corner_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime?>("Created")
-                        .HasColumnType("datetime(6)");
-
                     b.Property<string>("Description")
                         .HasColumnType("longtext");
 
@@ -142,27 +112,57 @@ namespace Friendly_Corner_backend.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Password")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Role")
+                    b.Property<string>("PictureUrl")
                         .HasColumnType("longtext");
 
-                    b.Property<DateTime?>("Updated")
+                    b.Property<DateTime>("RegistrationDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("Role")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("WebUrl")
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("YourNamespace.Models.Price", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Prices");
                 });
 
             modelBuilder.Entity("Friendly_Corner_backend.Models.Booking", b =>

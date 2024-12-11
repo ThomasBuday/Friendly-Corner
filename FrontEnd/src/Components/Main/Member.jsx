@@ -1,23 +1,22 @@
+import React from 'react';
 import './Member.css';
+import { getDomainName } from '../../utils';  // Adjust the import path as necessary
 
 function Member(props) {
-
-    return(
-        <>
+    const domainName = getDomainName(props.url);
+    return (
         <figure className='photo-box'>
-                <img src={props.image} alt={props.alt} className="colleague" />
-                <figcaption>{props.name}<br />
-                    <a href={props.url} target="_blank">{props.address}</a>
-                </figcaption>
-                <div className='member-overlay text'><span>
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo architecto provident accusamus eaque, sed magnam tempora ducimus consectetur deserunt reiciendis rem quidem error modi deleniti culpa aspernatur, laborum tempore enim.
+            <img src={props.image} alt={props.alt} className="colleague" />
+            <figcaption>{props.name}<br />
+                <a href={props.url} target="_blank" rel="noopener noreferrer">{domainName}</a>
+            </figcaption>
+            <div className='member-overlay text'>
+                <span>
+                    {props.description || "No description available."}
                 </span>
-                </div>
+            </div>
         </figure>
-        </>
     );
-
 }
 
-export default Member
+export default Member;

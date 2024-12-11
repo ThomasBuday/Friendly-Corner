@@ -6,7 +6,7 @@
     height: 50vh;
 }
 
-.user-list h1 {
+.user-text h1 {
     margin-bottom: 20px;
     font-size: clamp(1.5rem, 2vw, 2rem);
     color: rgb(27, 26, 26);
@@ -14,14 +14,23 @@
 
 .user-text { 
     display: flex; 
-    align-items: center;
+    align-items: baseline ;
+    justify-content: left;
 }
 
-.alert { 
+.user-alert { 
     color: rgb(26, 27, 26);
-    padding: 0 0 20px 100px; 
+    margin-left: 100px;
+    padding: 0 10px;
+    border: 1px solid black;
     border-radius: 4px; 
     font-size: 1rem;
+}
+
+.user-alert.error {
+    background-color: #f44336; /* Red for errors */
+    color: white;
+    margin: 0 0 50px 0;
 }
 
 .user-tbl {
@@ -71,7 +80,7 @@
 .user-tbl tr, .user-bdy tr {
     display: table;
     width: 100%;
-    table-layout: fixed; /* Ensures the columns are managed better */
+    table-layout: fixed;
 }
 
 .sticky-column {
@@ -135,6 +144,11 @@
     color: white;
 }
 
+.noview { 
+    border: none;
+    background-color: inherit;
+}
+
 .editing {
     height: auto; /* Rows can expand when in edit mode */
 }
@@ -150,15 +164,20 @@
 }
 
 .update-file-input-label {
-    background-color: white;
-    border: 1px solid black;
+    background-color: inherit;
     border-radius: 2px;
     padding: 5px;
+    color: var(--clr-bgd-blue);
     cursor: pointer;
 }
 
+.update-file-input-label:hover {
+    color: white;
+    background-color: var(--clr-bgd-blue);
+}
+
 .view {
-    border: 2px solid var(--clr-bgd-blue);
+    background-color: inherit;
     color: var(--clr-bgd-blue);
 }
 

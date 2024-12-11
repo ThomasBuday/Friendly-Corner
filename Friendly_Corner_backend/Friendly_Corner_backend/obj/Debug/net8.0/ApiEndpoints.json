@@ -267,16 +267,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Friendly_Corner_backend.Controllers.MemberController",
-    "Method": "GetMembers",
-    "RelativePath": "api/Member",
+    "ContainingType": "YourNamespace.Controllers.PricesController",
+    "Method": "GetPrices",
+    "RelativePath": "api/Prices",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Friendly_Corner_backend.Models.Member, Friendly_Corner_backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[YourNamespace.Models.Price, Friendly_Corner_backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -287,22 +287,22 @@
     ]
   },
   {
-    "ContainingType": "Friendly_Corner_backend.Controllers.MemberController",
-    "Method": "PostMember",
-    "RelativePath": "api/Member",
+    "ContainingType": "YourNamespace.Controllers.PricesController",
+    "Method": "PostPrice",
+    "RelativePath": "api/Prices",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "member",
-        "Type": "Friendly_Corner_backend.Models.Member",
+        "Name": "price",
+        "Type": "YourNamespace.Models.Price",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Friendly_Corner_backend.Models.Member",
+        "Type": "YourNamespace.Models.Price",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -313,9 +313,9 @@
     ]
   },
   {
-    "ContainingType": "Friendly_Corner_backend.Controllers.MemberController",
-    "Method": "GetMember",
-    "RelativePath": "api/Member/{id}",
+    "ContainingType": "YourNamespace.Controllers.PricesController",
+    "Method": "GetPrice",
+    "RelativePath": "api/Prices/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -328,7 +328,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Friendly_Corner_backend.Models.Member",
+        "Type": "YourNamespace.Models.Price",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -339,9 +339,9 @@
     ]
   },
   {
-    "ContainingType": "Friendly_Corner_backend.Controllers.MemberController",
-    "Method": "PutMember",
-    "RelativePath": "api/Member/{id}",
+    "ContainingType": "YourNamespace.Controllers.PricesController",
+    "Method": "PutPrice",
+    "RelativePath": "api/Prices/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -352,17 +352,17 @@
         "IsRequired": true
       },
       {
-        "Name": "member",
-        "Type": "Friendly_Corner_backend.Models.Member",
+        "Name": "price",
+        "Type": "YourNamespace.Models.Price",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Friendly_Corner_backend.Controllers.MemberController",
-    "Method": "DeleteMember",
-    "RelativePath": "api/Member/{id}",
+    "ContainingType": "YourNamespace.Controllers.PricesController",
+    "Method": "DeletePrice",
+    "RelativePath": "api/Prices/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

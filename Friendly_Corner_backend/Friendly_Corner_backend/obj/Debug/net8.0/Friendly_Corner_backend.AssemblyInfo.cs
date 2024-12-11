@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Friendly_Corner_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+535d3ae8527e42ba1a345975ec97539ea790a5ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f99022218166cc42d6d949facb35dcd7f518b7c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Friendly_Corner_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Friendly_Corner_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

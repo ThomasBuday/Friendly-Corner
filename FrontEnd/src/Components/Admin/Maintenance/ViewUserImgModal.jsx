@@ -1,6 +1,7 @@
 import React from 'react';
 import './ViewUserImgModal.css';
-import placeholderImage from '../../../Images/Team/user-placeholder.jpg'; // Adjust the import path as necessary
+
+const placeholderImage = '/Images/Team/user-placeholder.jpg';  // Path relative to public folder
 
 const ViewUserImgModal = ({ show, onClose, image }) => {
     if (!show) return null;

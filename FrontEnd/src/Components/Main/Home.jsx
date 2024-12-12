@@ -1,9 +1,9 @@
 import "./Home.css";
-import Asa from "../../Images/Team/Asa Andreasson.jpg";
-import Tinna from "../../Images/Team/Tinna Ahlander.jpg";
-
 import React, { useEffect, useContext } from 'react'; 
 import { BackgroundContext } from '../../context/BackgroundContext';
+
+const Asa = '/Images/Team/Asa Andreasson.jpg';
+const Tinna = '/Images/Team/Tinna Ahlander.jpg';
 
 function Home() {
 
@@ -58,7 +58,7 @@ function Home() {
               <img src={Asa} alt="Avatar" className="image" />
               <figcaption>
                 Åsa Andreasson<br />
-                <a href="https://www.kreativakvadrat.com/" target="_blank">
+                <a href="https://www.kreativakvadrat.com/" target="_blank" rel="noopener noreferrer">
                   Kreativa Kvadrat
                 </a>
               </figcaption>
@@ -68,7 +68,7 @@ function Home() {
               <img src={Tinna} alt="Avatar" className="image" />
               <figcaption>
                 Tinna Ahlander<br />
-                <a href="https://tinnadesign.se/" target="_blank">
+                <a href="https://tinnadesign.se/" target="_blank" rel="noopener noreferrer">
                   Tinna Design
                 </a>
               </figcaption>

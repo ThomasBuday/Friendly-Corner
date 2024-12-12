@@ -1,10 +1,4 @@
 import React, { createContext, useState, useEffect } from 'react';
-import bgdMain from '../Images/bgd-main.png'; 
-import bgdOffice from '../Images/bgd-office.jpg'; 
-import bgdMeeting from '../Images/bgd-meeting.jpg'; 
-import bgdMeeting2 from '../Images/bgd-meeting-2.jpg'; 
-import bgdButik from '../Images/bgd-butik.jpg';
-
 import axios from 'axios';
 import { BASE_URL } from '../config';  // Import the base URL
 
@@ -25,8 +19,8 @@ export function BackgroundProvider({ children }) {
           const updatedBackgrounds = { ...backgrounds };
           response.data.forEach(image => {
             if (image.backgroundType && image.imagePath) {
-                updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}?t=${new Date().getTime()}`;
-              }
+              updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}?t=${new Date().getTime()}`;
+            }
           });
   
           setBackgrounds(updatedBackgrounds);
@@ -55,17 +49,17 @@ export function BackgroundProvider({ children }) {
 
     const setDefaultBackgrounds = () => { 
       setBackgrounds({ 
-          background1: bgdMain, 
-          background2: bgdOffice, 
-          background3: bgdMeeting, 
-          background4: bgdMeeting2, 
-          background5: bgdButik 
+          background1: '/Images/bgd-main.png', 
+          background2: '/Images/bgd-office.jpg', 
+          background3: '/Images/bgd-meeting.jpg', 
+          background4: '/Images/bgd-meeting-2.jpg', 
+          background5: '/Images/bgd-butik.jpg' 
       }); 
     };
 
     fetchSavedImages();
     fetchPrices();
-  }, []);
+  }, [backgrounds]);
 
   if (loading) {
     return <div>Loading...</div>;

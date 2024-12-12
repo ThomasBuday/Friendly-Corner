@@ -6,7 +6,8 @@ import axios from 'axios';
 import './UserSlider.css';
 import { BASE_URL, BASE_LOGIN } from '../../config';
 import Member from './Member';  // Adjust the import path as necessary
-import placeholderImage from '../../Images/Team/user-placeholder.jpg'; // Adjust the import path as necessary
+
+const placeholderImage = '/Images/Team/user-placeholder.jpg';  // Path relative to public folder
 
 const UserSlider = () => {
     const [users, setUsers] = useState([]);

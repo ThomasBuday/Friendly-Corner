@@ -1,10 +1,11 @@
-import butik1 from '../../Images/Butik1.jpg';
-import butik2 from '../../Images/Butik2.jpg';
-import butik3 from '../../Images/Butik3.jpg';
-import './Butik.css';
-
+import "./Butik.css";
 import React, { useContext } from 'react'; 
 import { BackgroundContext } from '../../context/BackgroundContext';
+
+// Remove direct imports and use direct URL references
+const butik1 = '/Images/Butik1.jpg';
+const butik2 = '/Images/Butik2.jpg';
+const butik3 = '/Images/Butik3.jpg';
 
 function Butik() {
 

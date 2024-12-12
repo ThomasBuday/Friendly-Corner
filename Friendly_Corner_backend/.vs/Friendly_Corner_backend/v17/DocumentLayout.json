@@ -99,8 +99,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Models\\Price.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowAUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:16:54.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:16:54.524Z"
             },
             {
               "$type": "Document",
@@ -112,8 +111,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowAkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T09:55:57.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T09:55:57.302Z"
             },
             {
               "$type": "Document",
@@ -125,8 +123,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T11:24:13.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T11:24:13.958Z"
             },
             {
               "$type": "Document",
@@ -138,8 +135,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\AuthController.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAiwBQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T10:50:38.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T10:50:38.695Z"
             },
             {
               "$type": "Document",
@@ -151,8 +147,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-28T14:01:45.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T14:01:45.252Z"
             },
             {
               "$type": "Document",
@@ -164,8 +159,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Models\\Booking.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:34:54.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:34:54.291Z"
             },
             {
               "$type": "Document",
@@ -177,8 +171,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Models\\Room.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:37:32.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:37:32.46Z"
             },
             {
               "$type": "Document",
@@ -190,8 +183,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\BackgroundImageController.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAqwCsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T21:11:08.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T21:11:08.921Z"
             },
             {
               "$type": "Document",
@@ -203,8 +195,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\BookingController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:15:49.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:15:49.723Z"
             },
             {
               "$type": "Document",
@@ -216,8 +207,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Controllers\\RoomController.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAywE0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T15:09:25.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T15:09:25.005Z"
             },
             {
               "$type": "Document",
@@ -229,8 +219,7 @@
               "RelativeToolTip": "Friendly_Corner_backend\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T16:14:18.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T16:14:18.207Z"
             }
           ]
         }

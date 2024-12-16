@@ -1,16 +1,16 @@
 import "./Home.css";
-import React, { useEffect, useContext } from 'react'; 
+import React, { useContext } from 'react'; 
 import { BackgroundContext } from '../../context/BackgroundContext';
 
-const Asa = '/Images/Team/Asa Andreasson.jpg';
-const Tinna = '/Images/Team/Tinna Ahlander.jpg';
+const Asa = '/Asa Andreasson.jpg';
+const Tinna = '/Tinna Ahlander.jpg';
 
 function Home() {
 
   const { backgrounds } = useContext(BackgroundContext);
   
-  useEffect(() => {
-  }, []);
+  // useEffect(() => {
+  // }, []);
   
   return (
     <>

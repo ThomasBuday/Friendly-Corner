@@ -14,12 +14,12 @@ export function BackgroundProvider({ children }) {
       try {
         setLoading(true);
         const response = await axios.get(`${BASE_URL}/api/backgroundimage/getSavedImages`);
-  
+        
         if (response.data && response.data.length > 0) {
           const updatedBackgrounds = { ...backgrounds };
           response.data.forEach(image => {
             if (image.backgroundType && image.imagePath) {
-              updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}?t=${new Date().getTime()}`;
+              updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}`;
             }
           });
   
@@ -49,12 +49,12 @@ export function BackgroundProvider({ children }) {
 
     const setDefaultBackgrounds = () => { 
       setBackgrounds({ 
-          background1: '/Images/bgd-main.png', 
-          background2: '/Images/bgd-office.jpg', 
-          background3: '/Images/bgd-meeting.jpg', 
-          background4: '/Images/bgd-meeting-2.jpg', 
-          background5: '/Images/bgd-butik.jpg' 
-      }); 
+          background1: '/bgd-main.png',
+          background2: '/bgd-office.jpg',
+          background3: '/bgd-meeting.jpg',
+          background4: '/bgd-meeting-2.jpg',
+          background5: '/bgd-butik.jpg'
+      });
     };
 
     fetchSavedImages();

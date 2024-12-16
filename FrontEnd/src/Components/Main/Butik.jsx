@@ -3,9 +3,9 @@ import React, { useContext } from 'react';
 import { BackgroundContext } from '../../context/BackgroundContext';
 
 // Remove direct imports and use direct URL references
-const butik1 = '/Images/Butik1.jpg';
-const butik2 = '/Images/Butik2.jpg';
-const butik3 = '/Images/Butik3.jpg';
+const butik1 = '/Butik1.jpg';
+const butik2 = '/Butik2.jpg';
+const butik3 = '/Butik3.jpg';
 
 function Butik() {
 

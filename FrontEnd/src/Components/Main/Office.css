@@ -1,6 +1,6 @@
 /* background image */
 .office-bgd-img {
-    background-image: url('../../Images/bgd-blueOffice-min.jpg');
+    /* background-image: url('../../Images/bgd-blueOffice-min.jpg'); */
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;

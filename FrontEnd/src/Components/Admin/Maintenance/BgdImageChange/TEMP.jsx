@@ -49,11 +49,11 @@ export function BackgroundProvider({ children }) {
 
     const setDefaultBackgrounds = () => { 
       setBackgrounds({ 
-          background1: '/Images/bgd-main.png', 
-          background2: '/Images/bgd-office.jpg', 
-          background3: '/Images/bgd-meeting.jpg', 
-          background4: '/Images/bgd-meeting-2.jpg', 
-          background5: '/Images/bgd-butik.jpg' 
+          background1: 'Images/bgd-main.png', 
+          background2: 'Images/bgd-office.jpg', 
+          background3: 'Images/bgd-meeting.jpg', 
+          background4: 'Images/bgd-meeting-2.jpg', 
+          background5: 'Images/bgd-butik.jpg' 
       }); 
     };
 

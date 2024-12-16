@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./Header.css";
 
-const hd_logo = '/Images/logo.png';  // Path relative to public folder
+const hd_logo = '/logo.png';  // Path relative to public folder
 
 function Header( { onLoginClick } ) {
 

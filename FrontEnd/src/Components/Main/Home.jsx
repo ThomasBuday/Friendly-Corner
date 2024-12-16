@@ -21,7 +21,7 @@ function Home() {
           {backgrounds.background1 && (
             <>
             <div  className="wc-bgd-img" 
-                  style={{ backgroundImage: `url(${backgrounds.background1}?${new Date().getTime()})` }} />
+                  style={{ backgroundImage: `url(${backgrounds.background1})`}} />
             </>
           )}
         </div>

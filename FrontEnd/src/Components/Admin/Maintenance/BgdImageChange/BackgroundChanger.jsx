@@ -67,7 +67,7 @@ function BackgroundChanger() {
 
         const updatedImagePath = `${
           response.data.newImagePath
-        }?${new Date().getTime()}`;
+        }`;
 
         setBackgrounds((prevBackgrounds) => ({
           ...prevBackgrounds,

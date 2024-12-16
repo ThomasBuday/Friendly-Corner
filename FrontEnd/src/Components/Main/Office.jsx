@@ -26,7 +26,7 @@ const getPriceById = (id) => {
           {backgrounds.background2 && (
             <>
               <div className="wc-bgd-img" 
-                style={{ backgroundImage: `url(${backgrounds.background2}?${new Date().getTime()})` }} />
+                style={{ backgroundImage: `url(${backgrounds.background2})` }} />
             </>
           )}
         </div>

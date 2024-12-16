@@ -59,7 +59,7 @@ export function BackgroundProvider({ children }) {
 
     fetchSavedImages();
     fetchPrices();
-  }, [backgrounds]);
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;

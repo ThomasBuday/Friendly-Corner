@@ -10,7 +10,7 @@ function Home() {
   const { backgrounds } = useContext(BackgroundContext);
   
   useEffect(() => {
-  }, [backgrounds]);
+  }, []);
   
   return (
     <>

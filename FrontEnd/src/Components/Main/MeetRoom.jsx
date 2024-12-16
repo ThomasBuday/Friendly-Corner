@@ -15,7 +15,7 @@ function MeetingRoom() {
     
     const getPriceById = (id) => {
         const price = prices.find(price => price.id === id);
-        return price ? formatNumber(price.amount) : "Loading...";
+        return price ? formatNumber(price.amount) : "...";
     };
     
     return(

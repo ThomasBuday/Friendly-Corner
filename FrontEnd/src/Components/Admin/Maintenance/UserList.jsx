@@ -190,7 +190,7 @@ const UserList = () => {
                                     <td>
                                         <button 
                                             className={`${!user.pictureUrl ? 'noview' : 'user-btn view'}`} 
-                                            onClick={() => user.pictureUrl && handleImageClick(`${user.pictureUrl}?t=${new Date().getTime()}`)} 
+                                            onClick={() => user.pictureUrl && handleImageClick(`${user.pictureUrl}`)} 
                                             disabled={!user.pictureUrl} > {user.pictureUrl ? 'View' : 'N/A'} 
                                         </button>
                                     </td>

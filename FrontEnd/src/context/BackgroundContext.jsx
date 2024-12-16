@@ -20,8 +20,10 @@ export function BackgroundProvider({ children }) {
           response.data.forEach(image => {
             if (image.backgroundType && image.imagePath) {
               updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}`;
+              console.log(updatedBackgrounds);
             }
-          });
+          })
+          ;
   
           setBackgrounds(updatedBackgrounds);
         } else {

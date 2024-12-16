@@ -9,66 +9,40 @@ export function BackgroundProvider({ children }) {
   const [prices, setPrices] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const TIMEOUT_DURATION = 5000; // Timeout duration in milliseconds (5 seconds)
-
   useEffect(() => {
     const fetchSavedImages = async () => {
-      const controller = new AbortController();
-      const signal = controller.signal;
-
-      const timeoutId = setTimeout(() => {
-        controller.abort();
-      }, TIMEOUT_DURATION);
-
       try {
         setLoading(true);
-        const response = await axios.get(`${BASE_URL}/api/backgroundimage/getSavedImages`, { signal });
-
+        const response = await axios.get(`${BASE_URL}/api/backgroundimage/getSavedImages`);
+  
         if (response.data && response.data.length > 0) {
           const updatedBackgrounds = { ...backgrounds };
           response.data.forEach(image => {
             if (image.backgroundType && image.imagePath) {
-              updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}`;
+              updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}?t=${new Date().getTime()}`;
             }
           });
-
+  
           setBackgrounds(updatedBackgrounds);
         } else {
           setDefaultBackgrounds();
         }
       } catch (error) {
-        if (signal.aborted) {
-          console.error('Request aborted due to timeout.');
-        } else {
-          console.error('Error fetching saved images:', error);
-          setDefaultBackgrounds();
-        }
+        console.error('Error fetching saved images:', error);
+        setDefaultBackgrounds();
       } finally {
-        clearTimeout(timeoutId);
         setLoading(false);
       }
     };
 
     const fetchPrices = async () => {
-      const controller = new AbortController();
-      const signal = controller.signal;
-
-      const timeoutId = setTimeout(() => {
-        controller.abort();
-      }, TIMEOUT_DURATION);
-
       try {
         setLoading(true);
-        const response = await axios.get(`${BASE_URL}/api/prices`, { signal });
+        const response = await axios.get(`${BASE_URL}/api/prices`);
         setPrices(response.data);
       } catch (error) {
-        if (signal.aborted) {
-          console.error('Request aborted due to timeout.');
-        } else {
-          console.error('Error fetching prices:', error);
-        }
+        console.error('Error fetching prices:', error);
       } finally {
-        clearTimeout(timeoutId);
         setLoading(false);
       }
     };
@@ -85,7 +59,7 @@ export function BackgroundProvider({ children }) {
 
     fetchSavedImages();
     fetchPrices();
-  }, [backgrounds]);
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;

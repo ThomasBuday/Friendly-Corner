@@ -45,7 +45,7 @@ function Header( { onLoginClick } ) {
 
             <HashLink onClick={closeSidebar} className="_link" smooth to="/#top">Hem</HashLink>
             <HashLink onClick={closeSidebar} className="_link" smooth to="/office/#top">Kontor</HashLink>
-            <HashLink onClick={closeSidebar} className="_link" smooth to="/meetingroom/#top">Mötesrom</HashLink>
+            <HashLink onClick={closeSidebar} className="_link" smooth to="/meetingroom/#top">Mötesrum</HashLink>
             <HashLink onClick={closeSidebar} className="_link" smooth to="/butik/#top" >Butik</HashLink>
             <Link onClick={closeSidebar} className="_link" to="/contactus" >Contact</Link>
             

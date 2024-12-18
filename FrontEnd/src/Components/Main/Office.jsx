@@ -14,7 +14,7 @@ function Office() {
 
 const getPriceById = (id) => {
     const price = prices.find(price => price.id === id);
-    return price ? formatNumber(price.amount) : "ing...";
+    return price ? formatNumber(price.amount) : "...";
 };
 
   return (

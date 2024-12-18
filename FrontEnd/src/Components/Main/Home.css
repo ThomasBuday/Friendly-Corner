@@ -39,7 +39,8 @@
   font-family: var(--ff-title);
   font-size: clamp(2rem, 5vw, 5rem);
   font-weight: 400;
-  letter-spacing: 2px;
+  font-variant-ligatures: normal;
+  /* letter-spacing: 2px; */
 }
 
 .text h3 {

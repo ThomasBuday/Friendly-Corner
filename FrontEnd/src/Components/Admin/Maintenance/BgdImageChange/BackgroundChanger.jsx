@@ -79,7 +79,7 @@ function BackgroundChanger() {
       }
     } catch (error) {
       console.error(
-        "Error updating background.\nServer is not responding:",
+        "Error.\nServer is not responding:",
         error
       );
       setMessage("Error updating background.\nServer is not responding"); // Set the error message

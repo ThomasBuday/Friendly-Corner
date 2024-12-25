@@ -14,7 +14,7 @@
 }
 
 .meetingRoom-sub {
-    height: clamp(450px, 55vw, 650px);
+    height: clamp(470px, 50vw, 650px);
     background-color: var(--clr-bgd-green);
     color: var(--clr-font-light);
 }

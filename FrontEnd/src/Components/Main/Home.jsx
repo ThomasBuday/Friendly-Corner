@@ -9,9 +9,6 @@ function Home() {
 
   const { backgrounds } = useContext(BackgroundContext);
   
-  // useEffect(() => {
-  // }, []);
-  
   return (
     <>
       <div className="wrapper">
@@ -20,12 +17,11 @@ function Home() {
         <div className="section-0 section">
           {backgrounds.background1 && (
             <>
-            <div  className="wc-bgd-img" 
+            <div className="wc-bgd-img" 
                   style={{ backgroundImage: `url(${backgrounds.background1})`}} />
             </>
           )}
         </div>
-
 
         {/* About us sub text */}
         <div className="about-sub sub">
@@ -74,7 +70,6 @@ function Home() {
               </figcaption>
             </figure>
           </div>
-          <div className="cowork-sub sub">
             <div className="cowork-text text">  
               <h1>Co-working Office</h1>
               <br />
@@ -91,7 +86,6 @@ function Home() {
               <br />
               <p>Är du intresserad av en kontorsplats, hör av dig till oss!</p>
             </div>
-          </div>
 
         {/* Insta feed */}
           <div className="insta-sub">

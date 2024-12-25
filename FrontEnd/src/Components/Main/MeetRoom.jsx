@@ -37,11 +37,11 @@ function MeetingRoom() {
 
                     <p>Mötesrum utöver det vanliga</p><br />
 
-                    <p>Byt miljö och boka mötesrum hos oss!</p>
+                    <p>Byt miljö och boka mötesrum hos oss!
 
-                    <p>Ett mötesrum utöver det vanliga, måste upplevas.</p>
-                    <p>Du hittar oss i mysiga Tändsticksområdet, i en lugn och unik miljö.</p>
-                    <p>Trevliga restauranger runt hörnet och nära till tåg och buss.</p><br /><br />
+                    Ett mötesrum utöver det vanliga, måste upplevas.
+                    Du hittar oss i mysiga Tändsticksområdet, i en lugn och unik miljö.
+                    Trevliga restauranger runt hörnet och nära till tåg och buss.</p><br /><br />
 
                     <p>Heldag {getPriceById(3)} kr</p>
                     <p>Halvdag {getPriceById(4)} kr</p>

@@ -8,7 +8,7 @@
 
 /* Text content sub */
 .office-sub {
-    height: clamp(450px, 60vw, 600px);
+    height: clamp(500px, 65vw, 700px);
     background-color: var(--clr-bgd-blue);
     color: var(--clr-font-light);
 }

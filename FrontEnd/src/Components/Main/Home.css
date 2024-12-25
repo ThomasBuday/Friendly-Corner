@@ -18,9 +18,10 @@
 .sub {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: clamp(300px, 40vw, 450px);
-  padding-top: clamp(5px, 10px, 15px);
+  /* align-items: center; */
+  height: clamp(360px, 50vw, 550px);
+  /* padding-top: clamp(5px, 10px, 15px); */
+  padding-top: 15px;
   padding-bottom: clamp(10px, 55px, 20px);
 }
 
@@ -28,7 +29,7 @@
 .text {
   font-family: var(--ff-text);
   display: block;
-  max-width: clamp(300px, 50%, 900px);
+  max-width: clamp(400px, 60%, 850px);
   
   animation: abt-fade-in;
   animation-duration: 2s;
@@ -36,8 +37,10 @@
 }
 
 .text h1 {
+  padding: 40px 0;
+
   font-family: var(--ff-title);
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(2rem, 5vw, 4.5rem);
   font-weight: 400;
   font-variant-ligatures: normal;
   /* letter-spacing: 2px; */
@@ -51,7 +54,7 @@
 
 .text p {
   font-family: var(--ff-text);
-  font-size: clamp(.9rem, 2vw, 1.5rem);
+  font-size: clamp(.9rem, 1.5vw, 1.4rem);
   text-wrap: pretty;
 }
 
@@ -104,7 +107,7 @@ figcaption, figcaption a {
 }
 
 figure .image {
-  width: clamp(150px, 40vw, 400px);
+  width: clamp(150px, 40vw, 350px);
 }
 
 figcaption a {

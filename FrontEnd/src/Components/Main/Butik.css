@@ -14,32 +14,28 @@
 }
 
 .butik-sub {
-    height: clamp(400px, 45vw, 500px);
+    height: clamp(370px, 40vw, 500px);
     background-color: var(--clr-bgd-green);
     color: var(--clr-font-light);
 }
 
 .butik-cont {
     background-color: white;
-    display: inline-flex;
-    height: clamp(110px, 25vw, 500px);
-    /* width: clamp(300px, 50vw, 60%); */
-    /* width: 100%; */
-    margin-bottom: 0;
+    height: 25vw;
+    margin: 40px;
 }
 
 .butik-pic {
-    /* background-color: red; */
     display: inline-flex;
-    justify-content: space-around;
+    gap: 15px;
+    justify-content: center;
     align-items: center;
-    height: 90%;
-    width: clamp(300px, 80vw, 2000px);
-    justify-content: space-around;
-    
+    /* height: 80%; */
+    /* width: clamp(300px, 5vw, 2000px); */
 }
 
 .butik-pic img {
-    height: clamp(90px, 22vw, 450px);
-    width: clamp(90px, 22vw, 450px);
+    aspect-ratio: 1;
+    height: clamp(110px, 30vw, 450px);
+    width: clamp(110px, 30vw, 450px);
 }

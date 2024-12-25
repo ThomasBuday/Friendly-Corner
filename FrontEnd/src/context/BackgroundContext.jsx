@@ -16,15 +16,14 @@ export function BackgroundProvider({ children }) {
         const response = await axios.get(`${BASE_URL}/api/backgroundimage/getSavedImages`);
         
         if (response.data && response.data.length > 0) {
-          const updatedBackgrounds = { ...backgrounds };
+          const updatedBackgrounds = {};
+          const timestamp = new Date().getTime(); // Cache-busting query parameter
           response.data.forEach(image => {
             if (image.backgroundType && image.imagePath) {
-              updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}`;
-              console.log(updatedBackgrounds);
+              updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}?t=${timestamp}`;
             }
-          })
-          ;
-  
+          });
+
           setBackgrounds(updatedBackgrounds);
         } else {
           setDefaultBackgrounds();
@@ -50,18 +49,19 @@ export function BackgroundProvider({ children }) {
     };
 
     const setDefaultBackgrounds = () => { 
+      const timestamp = new Date().getTime(); // Cache-busting query parameter
       setBackgrounds({ 
-          background1: '/bgd-main.png',
-          background2: '/bgd-office.jpg',
-          background3: '/bgd-meeting.jpg',
-          background4: '/bgd-meeting-2.jpg',
-          background5: '/bgd-butik.jpg'
+          background1: `/bgd-main.png?t=${timestamp}`,
+          background2: `/bgd-office.jpg?t=${timestamp}`,
+          background3: `/bgd-meeting.jpg?t=${timestamp}`,
+          background4: `/bgd-meeting-2.jpg?t=${timestamp}`,
+          background5: `/bgd-butik.jpg?t=${timestamp}`
       });
     };
 
     fetchSavedImages();
     fetchPrices();
-  }, []);
+  }, [BASE_URL]);
 
   if (loading) {
     return <div>Loading...</div>;

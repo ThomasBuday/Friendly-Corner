@@ -48,6 +48,7 @@ const getPriceById = (id) => {
             <p>Välkommen till jobbet!</p>
             <br />
             <br />
+            <br />
             <p>Fast kontorsplats {getPriceById(1)} kr/mån</p>
             <p>”Flex” 1 gång/vecka (fast dag) {getPriceById(2)} kr</p>
             <br />

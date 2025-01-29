@@ -1,2 +1,2 @@
-export const BASE_URL = process.env.BASE_URL || 'https://localhost:7177';
-export const BASE_LOGIN = 'emadmin';
+export const BASE_URL = process.env.BASE_URL || 'https://localhost:7177'; // Change the port nr to the corresponding number
+export const BASE_LOGIN = 'emadmin'; // Emergency Admin login in case of ... well, emergency.

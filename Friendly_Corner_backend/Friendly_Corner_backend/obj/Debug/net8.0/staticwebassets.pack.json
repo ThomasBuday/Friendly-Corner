@@ -29,6 +29,14 @@
       "PackagePath": "staticwebassets\\img-prfl\\adminTinna.png"
     },
     {
+      "Id": "C:\\CODE\\Internship\\Friendly Corner\\Friendly_Corner_backend\\Friendly_Corner_backend\\wwwroot\\img-prfl\\emadmin.png",
+      "PackagePath": "staticwebassets\\img-prfl\\emadmin.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Friendly_Corner_backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Friendly_Corner_backend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

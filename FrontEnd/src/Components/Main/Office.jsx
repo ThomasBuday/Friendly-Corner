@@ -1,12 +1,15 @@
 import "./Office.css";
-import UserSlider from './UserSlider';
-
-import React, { useContext } from 'react'; 
+// import UserSlider from './UserSlider';
+import UserGallery from "../Gallery/UserGallery";
+import axios from 'axios';
+import React, { useEffect, useState, useContext } from 'react'; 
+import { BASE_URL, BASE_LOGIN } from '../../config';  // Import the base URL
 import { BackgroundContext } from '../../context/BackgroundContext';
 
 function Office() {
   const { backgrounds, prices } = useContext(BackgroundContext);
-
+  const [users, setUsers] = useState([]);
+  
   // Helper function to get the price by ID
   const formatNumber = (number) => {
     return number.toLocaleString('sv-SE'); // Format numbers according to Swedish conventions
@@ -16,6 +19,20 @@ const getPriceById = (id) => {
     const price = prices.find(price => price.id === id);
     return price ? formatNumber(price.amount) : "...";
 };
+
+const fetchUsers = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}/api/auth/users`);
+    const filteredUsers = response.data.filter(user => user.username !== BASE_LOGIN);
+    setUsers(filteredUsers);
+  } catch (error) {
+    console.error('Error fetching users:', error);
+  }
+};
+
+useEffect(() => {
+  fetchUsers();
+}, []);
 
   return (
     <>
@@ -75,7 +92,8 @@ const getPriceById = (id) => {
             <h1>Dina Kollegor</h1>
           </div>
           <div className='photo-album'>
-            <UserSlider />
+            {/* <UserSlider /> Old way of presenting collegues*/}
+            <UserGallery users={users}/>
           </div>
         </div>
       </div>

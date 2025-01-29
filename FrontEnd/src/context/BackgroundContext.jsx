@@ -17,7 +17,7 @@ export function BackgroundProvider({ children }) {
         
         if (response.data && response.data.length > 0) {
           const updatedBackgrounds = {};
-          const timestamp = new Date().getTime(); // Cache-busting query parameter
+          const timestamp = new Date().getTime(); // Cache-busting
           response.data.forEach(image => {
             if (image.backgroundType && image.imagePath) {
               updatedBackgrounds[image.backgroundType] = `${BASE_URL}${image.imagePath}?t=${timestamp}`;
@@ -49,7 +49,7 @@ export function BackgroundProvider({ children }) {
     };
 
     const setDefaultBackgrounds = () => { 
-      const timestamp = new Date().getTime(); // Cache-busting query parameter
+      const timestamp = new Date().getTime(); // Cache-busting
       setBackgrounds({ 
           background1: `/bgd-main.png?t=${timestamp}`,
           background2: `/bgd-office.jpg?t=${timestamp}`,

@@ -29,22 +29,22 @@
 
 .dialog-btn.confirm {
     background-color: white;
-    border: 2px solid var(--clr-bgd-green);
-    color: var(--clr-bgd-green);
-}
-
-.dialog-btn.confirm:hover {
-    color: white;
-    background-color: var(--clr-bgd-green);
-}
-
-.dialog-btn.cancel {
-    background-color: white;
     border: 2px solid var(--clr-bgd-red);
     color: var(--clr-bgd-red);
 }
 
-.dialog-btn.cancel:hover {
+.dialog-btn.confirm:hover {
     color: white;
     background-color: var(--clr-bgd-red);
+}
+
+.dialog-btn.cancel {
+    background-color: white;
+    border: 2px solid var(--clr-bgd-green);
+    color: var(--clr-bgd-green);
+}
+
+.dialog-btn.cancel:hover {
+    color: white;
+    background-color: var(--clr-bgd-green);
 }

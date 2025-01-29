@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigin",
-        builder => builder.WithOrigins("http://localhost:3000")
+        builder => builder.WithOrigins("http://localhost:3000") // Replace port nr to corresponding number
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
@@ -68,11 +68,11 @@ app.Use(async (context, next) =>
 });
 
 app.UseRouting();
-app.UseStaticFiles(); // To serve all files under wwwroot
+app.UseStaticFiles(); // Serve all files under wwwroot
 
-app.UseCors("AllowAllOrigin"); // Ensure the CORS policy name matches
+app.UseCors("AllowAllOrigin");
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(); // Swagger UI
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

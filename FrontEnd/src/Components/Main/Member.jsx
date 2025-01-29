@@ -1,6 +1,6 @@
 import React from 'react';
 import './Member.css';
-import { getDomainName } from '../../utils';  // Adjust the import path as necessary
+import { getDomainName } from '../../utils';
 
 function Member(props) {
     const domainName = getDomainName(props.url);

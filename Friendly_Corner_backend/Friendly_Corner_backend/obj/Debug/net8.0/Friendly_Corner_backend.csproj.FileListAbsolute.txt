@@ -477,3 +477,7 @@ C:\CODE\Internship\Friendly Corner\Friendly_Corner_backend\Friendly_Corner_backe
 C:\CODE\Internship\Friendly Corner\Friendly_Corner_backend\Friendly_Corner_backend\obj\Debug\net8.0\Friendly_Corner_backend.pdb
 C:\CODE\Internship\Friendly Corner\Friendly_Corner_backend\Friendly_Corner_backend\obj\Debug\net8.0\Friendly_Corner_backend.genruntimeconfig.cache
 C:\CODE\Internship\Friendly Corner\Friendly_Corner_backend\Friendly_Corner_backend\obj\Debug\net8.0\ref\Friendly_Corner_backend.dll
+C:\CODE\Internship\Friendly Corner\Friendly_Corner_backend\Friendly_Corner_backend\bin\Debug\net8.0\Friendly_Corner_backend.staticwebassets.endpoints.json
+C:\CODE\Internship\Friendly Corner\Friendly_Corner_backend\Friendly_Corner_backend\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\CODE\Internship\Friendly Corner\Friendly_Corner_backend\Friendly_Corner_backend\obj\Debug\net8.0\staticwebassets\msbuild.Friendly_Corner_backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\CODE\Internship\Friendly Corner\Friendly_Corner_backend\Friendly_Corner_backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

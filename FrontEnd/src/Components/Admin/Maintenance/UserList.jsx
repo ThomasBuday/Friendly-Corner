@@ -6,6 +6,7 @@ import ConfirmationDialog from '../ConfirmationDialog'; // Dialog component
 import ViewUserImgModal from './ViewUserImgModal'; // Modal component for viewing images
 import EditUserImgModal from './EditUserImgModal'; // Modal component for editing images
 import { BASE_URL, BASE_LOGIN } from '../../../config';  // Import the base URL
+// import UserGallery from '../../Gallery/UserGallery';
 
 const UserList = () => {
     const [editId, setEditId] = useState(null);
@@ -150,6 +151,7 @@ const UserList = () => {
                 <h1>Registered Users</h1>
                 {alert.show && <span className="user-alert">{alert.message}</span>}
             </div>
+            {/* <UserGallery users={users} /> Add the UserGallery component */}
             <table className='user-tbl'>
                 <thead>
                     <tr>

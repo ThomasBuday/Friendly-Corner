@@ -84,8 +84,6 @@ namespace Friendly_Corner_backend.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception details for troubleshooting
-                Console.WriteLine($"Error fetching users: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

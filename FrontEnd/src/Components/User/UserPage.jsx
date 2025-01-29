@@ -3,17 +3,15 @@ import { useNavigate } from 'react-router-dom';
 
 function UserPage() {
 
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
 
     const handleLogout = () => {
-        // Clear tokens from both localStorage and sessionStorage
         localStorage.removeItem('token');
         sessionStorage.removeItem('token');
         
         navigate('/');
     };
     const handleBookRoomClick = () => {
-        // Navigate to the MeetingRoomCalendarPage
         navigate('/meetingroomcalendar');
       };
 

@@ -6,16 +6,16 @@ export default defineConfig({
   plugins: [react(), viteSingleFile()],
     server: {
     host: '0.0.0.0', // This will make the server accessible externally 
-    port: 3000, // Change the port to 3000
+    port: 3000, // Change the port nr to the corresponding number
     proxy: {
       '/api': {
-        target: 'https://localhost:7177',
+        target: 'https://localhost:7177', // Change the port nr to the corresponding number
         changeOrigin: true,
         secure: false,
       },
     },
   },
-  define: { 'process.env.BASE_URL': JSON.stringify('https://localhost:7177') },
+  define: { 'process.env.BASE_URL': JSON.stringify('https://localhost:7177') }, // Change the port nr to the corresponding number
 
 });
 

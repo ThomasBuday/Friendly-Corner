@@ -1,3 +1,5 @@
+// At the moment this module is not in use
+
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState } from 'react';
@@ -5,7 +7,7 @@ import Slider from 'react-slick';
 import axios from 'axios';
 import './UserSlider.css';
 import { BASE_URL, BASE_LOGIN } from '../../config';
-import Member from './Member';  // Adjust the import path as necessary
+import Member from './Member';
 
 const UserSlider = () => {
     const [users, setUsers] = useState([]);

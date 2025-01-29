@@ -8,8 +8,8 @@
 
 
   overflow-y: scroll;
-  /* padding-right: 17px; For cross-browser compatibility */
-  /* box-sizing: content-box; Width will be 100% + 17px */
+  /* padding-right: 17px;
+  box-sizing: content-box; */
 }
 
 a {
